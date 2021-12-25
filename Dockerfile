@@ -39,6 +39,7 @@ COPY ./backend /backend
 
 WORKDIR /backend
 
+RUN composer install
 RUN cp .env.example .env
 RUN php artisan key:generate --env=sample
 RUN php artisan storage:link
